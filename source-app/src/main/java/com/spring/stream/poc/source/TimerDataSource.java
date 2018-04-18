@@ -13,7 +13,7 @@ public class TimerDataSource {
 
     @InboundChannelAdapter(value = Source.OUTPUT, poller = @Poller(fixedRate = "500"))
     public String produceData() {
-        logger.info("TODO: produceData");
+        logger.info("Producing Hello Message");
         return "hello";
     }
 }
