@@ -27,5 +27,5 @@ mvn spring-boot:run -f source-app
 
 # To do list
 - [x] Build a processor service
-- [] Build a sink service
-- [] Build an end to end data pipeline with source, processor and sink apps 
+- [ ] Build a sink service
+- [ ] Build an end to end data pipeline with source, processor and sink apps 
