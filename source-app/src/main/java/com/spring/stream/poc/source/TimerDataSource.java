@@ -1,4 +1,4 @@
-package com.spring.stream.poc.source.configuration;
+package com.spring.stream.poc.source;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,6 @@ import org.springframework.integration.annotation.Poller;
 public class TimerDataSource {
     private static final Logger logger = LoggerFactory.getLogger(TimerDataSource.class);
 
-//    @Scheduled(fixedRate = 500)
     @InboundChannelAdapter(value = Source.OUTPUT, poller = @Poller(fixedRate = "500"))
     public String produceData() {
         logger.info("TODO: produceData");
