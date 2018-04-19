@@ -16,8 +16,10 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.cloud.stream.binder.kinesis.properties.KinesisBinderConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.integration.aws.metadata.DynamoDbMetaDataStore;
 import org.springframework.integration.metadata.MetadataStore;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import static com.amazonaws.SDKGlobalConfiguration.AWS_CBOR_DISABLE_SYSTEM_PROPERTY;
 import static com.amazonaws.regions.Regions.DEFAULT_REGION;
@@ -32,6 +34,11 @@ public class SourceConfiguration {
             System.setProperty(AWS_CBOR_DISABLE_SYSTEM_PROPERTY, "true");
         }
 
+    }
+
+    @Bean
+    TaskExecutor taskExecutor() {
+        return new ThreadPoolTaskExecutor();
     }
 
     @Bean

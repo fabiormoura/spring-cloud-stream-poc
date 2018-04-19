@@ -33,8 +33,24 @@ echo "the next command will start the sink service which starts consuming messag
 mvn spring-boot:run -f sink-app
 ```
 
+# How to read Log messages
+
+As spring boot sleuth is being used, correlation of logs messages happens automatically. Below is a log message example and next shows how it has to be interpreted:
+
+```
+2018-04-18 22:26:31.575  INFO [sink-app,cd0303c506dbad3b,2d915de0c1380122,false] 9323 --- [   hello.sink-1] com.spring.stream.poc.sink.DataSink      : Reading Message: hello
+```
+
+|                        Value                       | Semantics                                          |
+|:--------------------------------------------------:|----------------------------------------------------|
+| 2018-04-18 22:26:31.575                            | current timestamp                                  |
+| INFO                                               | log level                                          |
+| [sink-app,cd0303c506dbad3b,2d915de0c1380122,false] | [applicationName,traceId,currentSpanId,exportable] |
+
+
 # To do list
 - [x] Build a processor service
 - [x] Build a sink service
 - [ ] Build an end to end data pipeline with source, processor and sink apps
 - [ ] Run multiple sink services concurrently as a group
+- [x] Enable distributed tracing with spring sleuth
