@@ -1,4 +1,4 @@
-package com.spring.stream.poc.source;
+package com.spring.stream.poc.sink;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SourceApplicationTests {
+public class SinkApplicationTest {
 
 	@Test
 	public void contextLoads() {

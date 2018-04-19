@@ -25,7 +25,16 @@ echo "the next command will start the source service which will produce a hello 
 mvn spring-boot:run -f source-app
 ```
 
+# How to run sink service
+
+```bash
+echo "ensure kinesis is running locally before moving ahead"
+echo "the next command will start the sink service which starts consuming messages and logs it out to standard output"
+mvn spring-boot:run -f sink-app
+```
+
 # To do list
 - [x] Build a processor service
-- [ ] Build a sink service
-- [ ] Build an end to end data pipeline with source, processor and sink apps 
+- [x] Build a sink service
+- [ ] Build an end to end data pipeline with source, processor and sink apps
+- [ ] Run multiple sink services concurrently as a group
