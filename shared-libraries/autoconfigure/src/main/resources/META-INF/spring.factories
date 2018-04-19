@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.spring.poc.autoconfigure.cloud.stream.binder.kinesis.KinesisAutoConfiguration

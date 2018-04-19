@@ -13,6 +13,7 @@
 
     <modules>
         <module>shared-dependencies</module>
+        <module>shared-libraries</module>
         <module>service-parent</module>
         <module>service-starters</module>
         <module>sample-services</module>

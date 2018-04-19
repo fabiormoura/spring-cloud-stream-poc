@@ -50,7 +50,7 @@ mvn spring-boot:run -f sample-services/sample-sink-service
 As spring boot sleuth is being used, correlation of logs messages happens automatically. Below is a log message example and next shows how it has to be interpreted:
 
 ```
-2018-04-18 22:26:31.575  INFO [sink-app,cd0303c506dbad3b,2d915de0c1380122,false] 9323 --- [   hello.sink-1] com.spring.stream.poc.sink.DataSink      : Reading Message: hello
+2018-04-18 22:26:31.575  INFO [sample-sink-app,cd0303c506dbad3b,2d915de0c1380122,false] 9323 --- [   hello.sink-1] com.spring.stream.poc.sink.DataSink      : Reading Message: hello
 ```
 
 |                        Value                       | Semantics                                          |
@@ -64,9 +64,9 @@ As spring boot sleuth is being used, correlation of logs messages happens automa
 
 - [x] Build a source service
 - [x] Build a sink service
-- [ ] Create base service starter with shared capabilities (tracing, monitoring, logging)
+- [x] Create base service starter with shared capabilities (tracing, monitoring, logging)
 - [ ] Build a processor service
-- [ ] Remove common duplicated code
+- [x] Remove common duplicated configuration class for sink and source services
 - [ ] Add tests for source and sink services
 - [ ] Build an end to end data pipeline with source, processor and sink apps
 - [ ] Run multiple sink services concurrently as a single group

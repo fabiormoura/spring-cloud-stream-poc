@@ -16,6 +16,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.spring.stream.poc</groupId>
+            <artifactId>autoconfigure</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream</artifactId>
         </dependency>
