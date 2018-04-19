@@ -3,7 +3,7 @@ The goal is to build few stream services and have at least one of each spring st
 
 # About the end to end flow
 
-There is no end to end flow yet decided. Actual code has only one source service but other services are going to be added to the stream pipeline shortly.
+There is no end to end flow yet decided. Actual code has only a source and a sink service but other services are going to be built after the data pipeline flow has been defined.
 
 # About Stream Source Service
 
