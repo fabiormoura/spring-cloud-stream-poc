@@ -7,7 +7,7 @@ There is no end to end flow yet decided. Actual code has only a source and a sin
 
 # About stream source service
 
-The current version produces a hello message every 500 milliseconds.
+The current version produces a hello message every 1000 milliseconds.
 
 # About stream sink service
 
