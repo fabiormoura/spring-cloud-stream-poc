@@ -1,9 +1,13 @@
 package com.spring.poc.autoconfigure.cloud.stream.binder.kinesis;
 
-
-import static com.amazonaws.SDKGlobalConfiguration.AWS_CBOR_DISABLE_SYSTEM_PROPERTY;
-import static com.amazonaws.regions.Regions.DEFAULT_REGION;
-
+import com.amazonaws.ClientConfiguration;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBAsync;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBAsyncClientBuilder;
+import com.amazonaws.services.kinesis.AmazonKinesisAsync;
+import com.amazonaws.services.kinesis.AmazonKinesisAsyncClientBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -16,15 +20,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.aws.metadata.DynamoDbMetaDataStore;
 import org.springframework.integration.metadata.MetadataStore;
 
-import com.amazonaws.ClientConfiguration;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.client.builder.AwsClientBuilder;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBAsync;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBAsyncClientBuilder;
-import com.amazonaws.services.kinesis.AmazonKinesisAsync;
-import com.amazonaws.services.kinesis.AmazonKinesisAsyncClientBuilder;
+import static com.amazonaws.SDKGlobalConfiguration.AWS_CBOR_DISABLE_SYSTEM_PROPERTY;
+import static com.amazonaws.regions.Regions.DEFAULT_REGION;
 
+@Configuration
 @ConditionalOnClass(KinesisBinderConfiguration.class)
 @AutoConfigureBefore({KinesisBinderConfiguration.class})
 public class KinesisAutoConfiguration {
