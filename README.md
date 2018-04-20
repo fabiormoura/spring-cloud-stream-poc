@@ -67,7 +67,7 @@ As spring boot sleuth is being used, correlation of logs messages happens automa
 - [x] Create base service starter with shared capabilities (tracing, monitoring, logging)
 - [ ] Build a processor service
 - [x] Remove common duplicated configuration class for sink and source services
-- [ ] Add tests for source
+- [x] Add tests for source
 - [x] Add tests for sink services
 - [ ] Build an end to end data pipeline with source, processor and sink apps
 - [ ] Run multiple sink services concurrently as a single group
