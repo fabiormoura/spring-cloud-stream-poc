@@ -57,7 +57,7 @@ As spring boot sleuth is being used, correlation of logs messages happens automa
 |:--------------------------------------------------:|----------------------------------------------------|
 | 2018-04-18 22:26:31.575                            | current timestamp                                  |
 | INFO                                               | log level                                          |
-| [sink-app,cd0303c506dbad3b,2d915de0c1380122,false] | [applicationName,traceId,currentSpanId,exportable] |
+| [sample-sink-service,cd0303c506dbad3b,2d915de0c1380122,false] | [applicationName,traceId,currentSpanId,exportable] |
 
 
 # To do list
@@ -67,7 +67,8 @@ As spring boot sleuth is being used, correlation of logs messages happens automa
 - [x] Create base service starter with shared capabilities (tracing, monitoring, logging)
 - [ ] Build a processor service
 - [x] Remove common duplicated configuration class for sink and source services
-- [ ] Add tests for source and sink services
+- [ ] Add tests for source
+- [x] Add tests for sink services
 - [ ] Build an end to end data pipeline with source, processor and sink apps
 - [ ] Run multiple sink services concurrently as a single group
 - [x] Enable distributed tracing with spring sleuth
