@@ -62,10 +62,10 @@ As spring boot sleuth is being used, correlation of logs messages happens automa
 
 # To do list
 
-- [x] Build a source service
-- [x] Build a sink service
+- [x] Build a sample source service
+- [x] Build a sample sink service
+- [ ] Build a sample processor service
 - [x] Create base service starter with shared capabilities (tracing, monitoring, logging)
-- [ ] Build a processor service
 - [x] Remove common duplicated configuration class for sink and source services
 - [x] Add tests for source
 - [x] Add tests for sink services
