@@ -20,6 +20,9 @@
         <spring-cloud.version>Finchley.M9</spring-cloud.version>
         <spring-cloud-stream-kinesis.version>1.0.0.M1</spring-cloud-stream-kinesis.version>
         <spring-cloud-sleuth.version>2.0.0.M9</spring-cloud-sleuth.version>
+        <spring-webmvc.version>5.0.5.RELEASE</spring-webmvc.version>
+        <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
+        <java.version>1.8</java.version>
     </properties>
 
 
@@ -50,6 +53,16 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-stream-binder-kinesis</artifactId>
                 <version>${spring-cloud-stream-kinesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring-webmvc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax-servlet-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.spring.stream.poc</groupId>

@@ -17,13 +17,16 @@ spring.cloud.stream.defaultBinder: kinesis
 
 ---
 
+# everything below is active only during development
+spring.profiles: development
+
 # used when spring.cloud.stream.defaultBinder: kinesis
 cloud.aws.region.static: eu-west-1
 
 # used when spring.cloud.stream.defaultBinder: rabbit
 spring.rabbitmq.addresses: localhost:5672
 
-# not required for higher environments. In case message is published to rabbitmq exchange this configuration will ensure rabbitmq forwards the message to queues below
+# not required for higher environments. In case message is published to rabbitmq exchange this configuration will ensure rabbitmq forwards the message to below queues
 # this should not necessarily be enforced by the producer application but for local testing is fine
 spring.cloud.stream.bindings.output.producer.requiredGroups: transformer-app
 
